@@ -12,9 +12,28 @@ export default function Home() {
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e?: React.MouseEvent) => {
+    // Prevent default if event is provided
+    if (e) {
+      e.preventDefault();
+    }
+
+    // Validate inputs
     if (!goal.trim()) {
       setError("Please tell us what you want to build!");
+      return;
+    }
+
+    const budgetNum = Number(budget);
+    const daysNum = Number(days);
+
+    if (isNaN(budgetNum) || budgetNum < 0) {
+      setError("Please enter a valid budget (0 or greater)");
+      return;
+    }
+
+    if (isNaN(daysNum) || daysNum < 1) {
+      setError("Please enter a valid number of days (1 or greater)");
       return;
     }
 
@@ -23,42 +42,57 @@ export default function Home() {
     setError("");
 
     try {
+      console.log("Sending request:", { budget: budgetNum, days: daysNum, goal: goal.trim() });
+      
       const res = await fetch("/api/recommend", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          budget: Number(budget),
-          days: Number(days),
+          budget: budgetNum,
+          days: daysNum,
           goal: goal.trim(),
         }),
       });
 
+      console.log("Response status:", res.status);
+
       if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
         const errorMessage = errorData.error || `Server error (${res.status})`;
+        console.error("API Error:", errorMessage);
         throw new Error(errorMessage);
       }
 
       const data = await res.json();
+      console.log("Response received:", data);
+      
       if (data.error) {
         throw new Error(data.error);
       }
-      setResult(data.recommendation || "No recommendation available.");
+      
+      if (!data.recommendation) {
+        throw new Error("No recommendation received from server");
+      }
+      
+      setResult(data.recommendation);
     } catch (err) {
+      console.error("Error in handleSubmit:", err);
       let errorMessage = "Something went wrong. Please try again.";
       
       if (err instanceof Error) {
         errorMessage = err.message;
         
         // Provide helpful messages for common errors
-        if (err.message.includes("GROQ_API_KEY")) {
+        if (err.message.includes("GROQ_API_KEY") || err.message.includes("API key")) {
           errorMessage = "API key not configured. Please check your .env.local file.";
         } else if (err.message.includes("Failed to fetch") || err.message.includes("NetworkError")) {
           errorMessage = "Network error. Please check your connection and try again.";
-        } else if (err.message.includes("Server error")) {
-          errorMessage = "Server error. Please try again in a moment.";
+        } else if (err.message.includes("Server error") || err.message.includes("500")) {
+          errorMessage = "Server error. The server may be restarting. Please wait a moment and try again.";
+        } else if (err.message.includes("Cannot find module")) {
+          errorMessage = "Build error detected. Please refresh the page or restart the dev server.";
         }
       }
       
@@ -225,7 +259,13 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-6 md:p-10 space-y-6">
+        <form 
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+          className="bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-6 md:p-10 space-y-6"
+        >
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-bold text-indigo-200 mb-3 flex items-center gap-2">
@@ -278,9 +318,10 @@ export default function Home() {
           </div>
 
           <button
-            onClick={handleSubmit}
-            disabled={loading}
+            onClick={(e) => handleSubmit(e)}
+            disabled={loading || !goal.trim()}
             className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 disabled:from-gray-600 disabled:to-gray-600 text-white font-bold py-5 rounded-xl text-xl transition-all duration-300 disabled:cursor-not-allowed shadow-2xl hover:shadow-indigo-500/50 transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3"
+            type="button"
           >
             {loading ? (
               <>
@@ -475,7 +516,7 @@ export default function Home() {
               </div>
             </div>
           )}
-        </div>
+        </form>
 
         <div className="mt-10 text-center">
           <p className="text-indigo-200/80 text-sm font-medium">
