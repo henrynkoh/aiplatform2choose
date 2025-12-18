@@ -1,389 +1,368 @@
-# BuildFast Advisor - Complete Documentation
+<div align="center">
 
-## 🚀 Overview
+# ⚡ BuildFast Advisor
 
-**BuildFast Advisor** is an intelligent, AI-powered no-code tool recommender that helps entrepreneurs, developers, and creators find the perfect combination of tools and strategies to build their projects quickly and efficiently. Whether you're building a mobile app, web platform, automation workflow, or any digital product, BuildFast Advisor analyzes your budget, timeline, and goals to provide personalized, actionable recommendations.
+### 🚀 AI-Powered No-Code Tool Recommender
 
-### What Makes BuildFast Advisor Special?
+**Get instant, personalized no-code tool recommendations in 5 seconds**
 
-- **AI-Powered Intelligence**: Leverages Groq's lightning-fast LLM (Llama 3.3 70B) to provide intelligent, context-aware recommendations
-- **Budget-Conscious**: Every recommendation respects your financial constraints, helping you maximize value
-- **Time-Optimized**: Plans are tailored to your available timeline, from quick 3-day prototypes to comprehensive 30-day builds
-- **No-Code Focus**: Specializes in recommending no-code and low-code tools that require minimal technical expertise
-- **Google Sheets Integration**: One-click export to Google Sheets for easy project management and collaboration
-- **Beautiful, Modern UI**: Dark gradient design with glassmorphism effects for an exceptional user experience
+[![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Groq AI](https://img.shields.io/badge/Groq-AI-FF6B6B?style=for-the-badge)](https://groq.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-## 📋 Table of Contents
+[🌐 Live Demo](#) • [📖 Documentation](#documentation) • [🚀 Quick Start](#quick-start) • [💬 Discussions](https://github.com/henrynkoh/aiplatform2choose/discussions)
 
-1. [Features](#features)
-2. [Getting Started](#getting-started)
-3. [Installation Guide](#installation-guide)
-4. [Configuration](#configuration)
-5. [Usage Guide](#usage-guide)
-6. [API Documentation](#api-documentation)
-7. [Deployment](#deployment)
-8. [Troubleshooting](#troubleshooting)
-9. [Contributing](#contributing)
-10. [License](#license)
+---
 
-## ✨ Features
+</div>
 
-### Core Functionality
+## ✨ What is BuildFast Advisor?
 
-- **Smart Input System**: Three simple inputs (Budget, Days, Goal) generate comprehensive recommendations
-- **AI-Powered Analysis**: Advanced LLM analyzes your requirements and suggests optimal tool combinations
-- **Comparison Tables**: Side-by-side comparison of top 3 tool options with pros, cons, and use cases
-- **Day-by-Day Plans**: Detailed, actionable daily tasks to guide your project from start to finish
-- **Cost Breakdown**: Transparent pricing information for all recommended tools
-- **Limitations & Considerations**: Honest assessment of what's possible within your constraints
+**BuildFast Advisor** is an intelligent AI-powered tool that helps entrepreneurs, developers, and creators find the perfect no-code tools for their projects. Simply enter your budget, timeline, and goal, and get instant personalized recommendations with complete implementation plans.
 
-### User Experience Features
+### 🎯 The Problem It Solves
 
-- **Real-Time Processing**: Fast AI responses with visual loading indicators
-- **Error Handling**: Comprehensive error messages with retry functionality
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Dark Mode UI**: Beautiful gradient theme with glassmorphism effects
-- **Copy to Google Sheets**: Export recommendations in TSV format for easy project management
-- **Formatted Output**: Clean, readable markdown tables with proper styling
+Choosing the right no-code tools is overwhelming:
+- ❌ **100+ tools** to research
+- ❌ **10-20 hours** of research time
+- ❌ **Hidden costs** and limitations
+- ❌ **Analysis paralysis** from too many options
 
-### Technical Features
+### ✅ The Solution
 
-- **Next.js 14 App Router**: Modern React framework with server-side rendering
-- **TypeScript**: Full type safety for reliable code
-- **Tailwind CSS**: Utility-first CSS for rapid UI development
-- **Groq SDK Integration**: Fast, efficient AI API calls
-- **Markdown Rendering**: Beautiful formatted output with react-markdown
-- **Environment Variables**: Secure API key management
+BuildFast Advisor uses **AI** to analyze your needs and provide:
+- ⚡ **5-second** recommendations
+- 💰 **Budget-aware** suggestions
+- 📅 **Realistic** day-by-day plans
+- ⚖️ **Honest** pros and cons
+- 📊 **One-click** Google Sheets export
 
-## 🏁 Getting Started
+---
+
+## 🎨 Features
+
+<div align="center">
+
+### 🧠 AI-Powered Intelligence
+Powered by Groq's Llama 3.3 70B model for lightning-fast, accurate recommendations
+
+### 💰 Budget-Conscious
+Every recommendation respects your financial constraints - from $0 to $1000+
+
+### ⏰ Time-Optimized
+Plans tailored to your timeline - from 3-day MVPs to 30-day comprehensive builds
+
+### 📊 Complete Roadmaps
+Not just tool names - get detailed day-by-day implementation plans
+
+### 📋 Comparison Tables
+Side-by-side comparison of top 3 options with costs, pros, cons, and use cases
+
+### 📤 Google Sheets Export
+One-click export to Google Sheets for project management and collaboration
+
+### 🎨 Modern UI
+Beautiful dark gradient design with glassmorphism effects
+
+### 📱 Responsive Design
+Works seamlessly on desktop, tablet, and mobile devices
+
+</div>
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
+- Node.js 18+ installed
+- A free Groq API key from [console.groq.com](https://console.groq.com/keys)
 
-- **Node.js 18.0.0 or higher** - [Download Node.js](https://nodejs.org/)
-- **npm 9.0.0 or higher** (comes with Node.js)
-- **Git** (optional, for version control)
-- **A modern web browser** (Chrome, Firefox, Safari, or Edge)
-
-### System Requirements
-
-- **Operating System**: macOS, Windows, or Linux
-- **RAM**: Minimum 4GB (8GB recommended)
-- **Disk Space**: At least 500MB free
-- **Internet Connection**: Required for API calls and package installation
-
-## 📦 Installation Guide
-
-### Step 1: Clone or Download the Repository
-
-If you have Git installed:
-```bash
-git clone <repository-url>
-cd aiplaform2choose
-```
-
-Or download the ZIP file and extract it to your desired location.
-
-### Step 2: Install Dependencies
-
-Navigate to the project directory and install all required packages:
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/henrynkoh/aiplatform2choose.git
+cd aiplatform2choose
+
+# Install dependencies
 npm install
-```
 
-This will install:
-- Next.js 14.2.5
-- React 18.3.1
-- TypeScript 5.5.3
-- Tailwind CSS 3.4.4
-- Groq SDK 0.37.0
-- react-markdown 10.1.0
-- And all other dependencies
+# Set up environment variables
+echo "GROQ_API_KEY=your_groq_api_key_here" > .env.local
 
-**Expected installation time**: 1-3 minutes depending on your internet speed.
-
-### Step 3: Set Up Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```bash
-touch .env.local
-```
-
-Or on Windows:
-```bash
-type nul > .env.local
-```
-
-Add your Groq API key:
-```
-GROQ_API_KEY=your_groq_api_key_here
-```
-
-**Important**: Never commit `.env.local` to version control. It's already in `.gitignore`.
-
-### Step 4: Get Your Groq API Key
-
-1. Visit [console.groq.com/keys](https://console.groq.com/keys)
-2. Sign up or log in (free account)
-3. Click "Create API Key"
-4. Copy the key (starts with `gsk_`)
-5. Paste it into your `.env.local` file
-
-**Note**: Groq offers free API access with generous rate limits, perfect for development and testing.
-
-### Step 5: Run the Development Server
-
-Start the development server:
-
-```bash
+# Run development server
 npm run dev
 ```
 
-You should see:
-```
-▲ Next.js 14.2.35
-- Local:        http://localhost:3000
-- Environments: .env.local
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-✓ Ready in 2.3s
-```
+### Get Your Free API Key
 
-### Step 6: Open in Browser
+1. Visit [console.groq.com/keys](https://console.groq.com/keys)
+2. Sign up (free, no credit card)
+3. Create API key
+4. Add to `.env.local`
 
-Navigate to [http://localhost:3000](http://localhost:3000) in your web browser.
+**📖 [Complete Setup Guide →](QUICKSTART.md)**
 
-## ⚙️ Configuration
+---
 
-### Environment Variables
+## 💡 How It Works
 
-| Variable | Description | Required | Default |
-|----------|-------------|----------|---------|
-| `GROQ_API_KEY` | Your Groq API key | Yes | None |
+<div align="center">
 
-### Customization Options
-
-#### Changing the Port
-
-Edit `package.json`:
-```json
-{
-  "scripts": {
-    "dev": "next dev -p 3001"
-  }
-}
+```mermaid
+graph LR
+    A[Enter Budget] --> D[AI Analysis]
+    B[Set Timeline] --> D
+    C[Describe Goal] --> D
+    D --> E[Get Recommendations]
+    E --> F[Review & Export]
 ```
 
-#### Modifying AI Model
+</div>
 
-Edit `app/api/recommend/route.ts`:
-```typescript
-model: 'llama-3.3-70b-versatile', // Change to your preferred model
+### Step-by-Step
+
+1. **Enter Your Budget** 💵
+   - Type your available budget in USD
+   - Consider both one-time and recurring costs
+
+2. **Set Your Timeline** ⏰
+   - Enter number of days available
+   - Be realistic about learning curve
+
+3. **Describe Your Goal** 🎯
+   - Be specific about what you want to build
+   - Include key features and target audience
+
+4. **Get Recommendations** ⚡
+   - AI analyzes your inputs (2-5 seconds)
+   - Receive personalized tool recommendations
+
+5. **Review & Export** 📊
+   - Review comparison tables and day-by-day plans
+   - Export to Google Sheets with one click
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### 🎨 Modern Interface
+![Interface](https://via.placeholder.com/800x400/6366f1/ffffff?text=BuildFast+Advisor+Interface)
+
+### 📊 Comparison Tables
+![Tables](https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Comparison+Tables)
+
+### 📅 Day-by-Day Plans
+![Plans](https://via.placeholder.com/800x400/ec4899/ffffff?text=Day-by-Day+Plans)
+
+</div>
+
+---
+
+## 🎯 Use Cases
+
+<table>
+<tr>
+<td width="50%">
+
+### 👔 Entrepreneurs
+Launch MVPs quickly without technical expertise
+
+</td>
+<td width="50%">
+
+### 🏢 Small Business
+Build internal tools and automation workflows
+
+</td>
+</tr>
+<tr>
+<td>
+
+### 🎨 Content Creators
+Create apps and websites for your brand
+
+</td>
+<td>
+
+### 📚 Students
+Learn no-code development through practical projects
+
+</td>
+</tr>
+<tr>
+<td>
+
+### 💼 Non-Technical Users
+Build digital products without coding knowledge
+
+</td>
+<td>
+
+### 🔧 Developers
+Get quick recommendations for client projects
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📊 Example Output
+
+### Input
+```
+Budget: $100
+Timeline: 7 days
+Goal: "a habit tracker app with daily reminders and streak tracking"
 ```
 
-Available models:
-- `llama-3.3-70b-versatile` (default, recommended)
-- `llama-3.1-70b-versatile`
-- `mixtral-8x7b-32768`
+### Output
+```
+✅ Best Option: Glide + Google Sheets
+✅ Total Cost: $0 (using free plans)
+✅ Timeline: 7 days
 
-#### Adjusting Response Length
+📊 Comparison Table:
+Rank | Tools | Cost | Pros | Cons
+1    | Glide | $0   | Easy, fast | Limited features
+2    | Bubble| $25  | Powerful   | Steeper learning
+3    | Adalo | $50  | Mobile-first| More expensive
 
-Edit `app/api/recommend/route.ts`:
-```typescript
-max_tokens: 800, // Increase for longer responses
+📅 Day-by-Day Plan:
+Day 1: Setup Google Sheets database
+Day 2: Connect Glide and design interface
+Day 3-4: Build core features
+Day 5: Add reminders
+Day 6: Testing
+Day 7: Launch!
 ```
 
-## 📖 Usage Guide
+---
 
-### Basic Usage
+## 🛠️ Tech Stack
 
-1. **Enter Your Budget**: Type your available budget in USD (e.g., 100, 500, 1000)
-2. **Set Your Timeline**: Enter the number of days you have available (e.g., 3, 7, 14, 30)
-3. **Describe Your Goal**: Write what you want to build (e.g., "a habit tracker app", "an e-commerce site for handmade jewelry")
-4. **Get Recommendations**: Click "Show me the best way" and wait for AI analysis
-5. **Review Results**: Examine the comparison table, day-by-day plan, and important notes
-6. **Export to Sheets**: Click "Copy to Sheets" to export to Google Sheets
+<div align="center">
 
-### Example Use Cases
+| Category | Technology |
+|----------|-----------|
+| **Framework** | [Next.js 14](https://nextjs.org/) - React framework with App Router |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) - Type safety |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS |
+| **AI** | [Groq SDK](https://groq.com/) - Fast LLM API |
+| **Markdown** | [react-markdown](https://github.com/remarkjs/react-markdown) - Markdown rendering |
 
-#### Example 1: Quick MVP
-- **Budget**: $50
-- **Days**: 5
-- **Goal**: "a simple landing page for my consulting business"
-- **Result**: Recommendations for Carrd, Webflow, or WordPress with 5-day implementation plan
+</div>
 
-#### Example 2: Mobile App
-- **Budget**: $200
-- **Days**: 14
-- **Goal**: "a mobile app for tracking fitness goals with social features"
-- **Result**: Recommendations for Glide, Adalo, or Bubble with detailed 14-day roadmap
+---
 
-#### Example 3: Automation Workflow
-- **Budget**: $100
-- **Days**: 7
-- **Goal**: "an automated email marketing system for my small business"
-- **Result**: Recommendations for Zapier, Make, or Airtable with step-by-step automation guide
+## 📚 Documentation
 
-### Advanced Tips
+<div align="center">
 
-- **Be Specific**: More detailed goals yield better recommendations (e.g., "a task management app with team collaboration" vs "an app")
-- **Realistic Budgets**: Set realistic budgets based on tool pricing (most no-code tools range from $0-$50/month)
-- **Timeline Planning**: Consider buffer time for testing and iteration
-- **Multiple Iterations**: Try different combinations to explore options
+| Document | Description | Link |
+|----------|-------------|------|
+| 📖 **Quick Start** | Get up and running in 5 minutes | [QUICKSTART.md](QUICKSTART.md) |
+| 📘 **User Manual** | Complete user guide with examples | [USER_MANUAL.md](USER_MANUAL.md) |
+| 🎓 **Tutorial** | Step-by-step learning guide | [TUTORIAL.md](TUTORIAL.md) |
+| 🔑 **API Key Setup** | How to get your Groq API key | [GET_API_KEY.md](GET_API_KEY.md) |
+| 📑 **Documentation Index** | Complete documentation overview | [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) |
 
-## 🔌 API Documentation
+</div>
 
-### Endpoint: `/api/recommend`
+---
 
-**Method**: POST
+## 🎨 Marketing Materials
 
-**Request Body**:
-```json
-{
-  "budget": 100,
-  "days": 7,
-  "goal": "a habit tracker app"
-}
-```
+We've created comprehensive marketing content for multiple platforms:
 
-**Response**:
-```json
-{
-  "recommendation": "**Best Option:** Glide, Google Sheets\n**Total Cost:** $0\n..."
-}
-```
+<div align="center">
 
-**Error Responses**:
-- `400`: Missing required fields
-- `401`: Invalid API key
-- `429`: Rate limit exceeded
-- `500`: Server error
+| Platform | Content | Location |
+|----------|---------|----------|
+| 📘 **Facebook** | Posts, ads, stories | [marketing/FACEBOOK.md](marketing/FACEBOOK.md) |
+| 📷 **Instagram** | Posts, reels, stories | [marketing/INSTAGRAM.md](marketing/INSTAGRAM.md) |
+| 🧵 **Threads** | Thread templates | [marketing/THREADS.md](marketing/THREADS.md) |
+| 📝 **Blogger** | Blog post templates | [marketing/BLOGGER.md](marketing/BLOGGER.md) |
+| 🌐 **WordPress** | WordPress content | [marketing/WORDPRESS.md](marketing/WORDPRESS.md) |
+| 📧 **Newsletter** | Email templates | [marketing/NEWSLETTER.md](marketing/NEWSLETTER.md) |
+| ✉️ **Email** | Campaign templates | [marketing/EMAIL.md](marketing/EMAIL.md) |
+| 🇰🇷 **Naver Blog** | Korean blog posts | [marketing/NAVER_BLOG.md](marketing/NAVER_BLOG.md) |
+| 🇰🇷 **Tistory** | Korean Tistory posts | [marketing/TISTORY.md](marketing/TISTORY.md) |
 
-### Rate Limits
+</div>
 
-Groq API free tier includes:
-- Generous rate limits for development
-- Fast response times (< 2 seconds)
-- No credit card required
+---
 
 ## 🚀 Deployment
 
 ### Deploy to Vercel (Recommended)
 
-Vercel offers seamless Next.js deployment:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/henrynkoh/aiplatform2choose)
 
-1. **Push to GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin <your-repo-url>
-   git push -u origin main
-   ```
+1. Push your code to GitHub
+2. Import repository in [Vercel](https://vercel.com)
+3. Add `GROQ_API_KEY` in environment variables
+4. Deploy!
 
-2. **Import to Vercel**:
-   - Go to [vercel.com](https://vercel.com)
-   - Click "Import Project"
-   - Select your GitHub repository
-   - Add environment variable: `GROQ_API_KEY`
-   - Click "Deploy"
+### Other Platforms
 
-3. **Your app is live!** Vercel provides a free `.vercel.app` domain.
+- **Netlify**: [Deploy Guide](README.md#deployment)
+- **Railway**: [Deploy Guide](README.md#deployment)
+- **Render**: [Deploy Guide](README.md#deployment)
 
-### Deploy to Netlify
+---
 
-1. Build the project:
-   ```bash
-   npm run build
-   ```
+## 📈 Project Statistics
 
-2. Deploy:
-   - Go to [netlify.com](https://netlify.com)
-   - Drag and drop the `.next` folder, or
-   - Connect your GitHub repository
-   - Add build command: `npm run build`
-   - Add publish directory: `.next`
-   - Add environment variable: `GROQ_API_KEY`
+<div align="center">
 
-### Deploy to Railway
+![GitHub stars](https://img.shields.io/github/stars/henrynkoh/aiplatform2choose?style=social)
+![GitHub forks](https://img.shields.io/github/forks/henrynkoh/aiplatform2choose?style=social)
+![GitHub issues](https://img.shields.io/github/issues/henrynkoh/aiplatform2choose)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/henrynkoh/aiplatform2choose)
 
-1. Install Railway CLI:
-   ```bash
-   npm i -g @railway/cli
-   ```
+**📊 Code Statistics:**
+- **27 files** committed
+- **14,000+ lines** of code and documentation
+- **9 platforms** of marketing content
+- **5 comprehensive** documentation files
 
-2. Deploy:
-   ```bash
-   railway login
-   railway init
-   railway up
-   ```
+</div>
 
-3. Add environment variable in Railway dashboard.
+---
 
-### Environment Variables in Production
+## 🎯 Roadmap
 
-Always set `GROQ_API_KEY` in your hosting platform's environment variables section. Never hardcode API keys in your code.
+- [x] ✅ Core AI recommendation engine
+- [x] ✅ Google Sheets export functionality
+- [x] ✅ Comprehensive documentation
+- [x] ✅ Marketing materials for 9 platforms
+- [ ] 🔄 Mobile app version
+- [ ] 🔄 Team collaboration features
+- [ ] 🔄 Advanced analytics dashboard
+- [ ] 🔄 Integration with more AI models
+- [ ] 🔄 User accounts and history
+- [ ] 🔄 API for developers
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-#### Issue: "Cannot find module" error
-**Solution**: 
-```bash
-rm -rf .next node_modules
-npm install
-npm run dev
-```
-
-#### Issue: API key not working
-**Solution**:
-1. Verify key in `.env.local` (no quotes, no spaces)
-2. Restart dev server
-3. Check key at console.groq.com
-
-#### Issue: Port 3000 already in use
-**Solution**:
-```bash
-# Kill process on port 3000
-lsof -ti:3000 | xargs kill -9
-
-# Or use different port
-npm run dev -- -p 3001
-```
-
-#### Issue: Build errors
-**Solution**:
-```bash
-# Clear cache and rebuild
-rm -rf .next
-npm run build
-```
-
-#### Issue: Slow API responses
-**Solution**:
-- Check internet connection
-- Verify Groq API status
-- Try reducing `max_tokens` in API route
-
-### Getting Help
-
-- Check the [GitHub Issues](https://github.com/your-repo/issues)
-- Review [Next.js Documentation](https://nextjs.org/docs)
-- Check [Groq API Documentation](https://console.groq.com/docs)
+---
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how:
+We welcome contributions! Here's how you can help:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
 
 ### Development Guidelines
 
@@ -393,9 +372,25 @@ We welcome contributions! Here's how:
 - Test your changes thoroughly
 - Update documentation as needed
 
-## 📄 License
+**📖 [Contributing Guide →](CONTRIBUTING.md)**
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
+
+## 💬 Community
+
+<div align="center">
+
+[💬 Discussions](https://github.com/henrynkoh/aiplatform2choose/discussions) • [🐛 Report Bug](https://github.com/henrynkoh/aiplatform2choose/issues) • [💡 Request Feature](https://github.com/henrynkoh/aiplatform2choose/issues)
+
+</div>
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🙏 Acknowledgments
 
@@ -404,13 +399,22 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Tailwind CSS** for the utility-first CSS framework
 - **Open Source Community** for inspiration and support
 
-## 📞 Support
+---
 
-For questions, issues, or feature requests:
-- Open an issue on GitHub
-- Contact: [your-email@example.com]
-- Documentation: [your-docs-url]
+## ⭐ Show Your Support
+
+If you find this project helpful, please give it a ⭐ on GitHub!
+
+<div align="center">
+
+### 🚀 Ready to Build Faster?
+
+**[Get Started Now →](QUICKSTART.md)** | **[View Documentation →](DOCUMENTATION_INDEX.md)** | **[Try Live Demo →](#)**
 
 ---
 
 **Built with ❤️ using Next.js, TypeScript, and Groq AI**
+
+[⬆ Back to Top](#-buildfast-advisor)
+
+</div>
